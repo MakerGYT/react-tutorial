@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Input, Space, Button } from 'antd'
 class Form extends Component {
     initialState = {
         name: '',
@@ -18,13 +19,11 @@ class Form extends Component {
     render() {
         const {name, job} = this.state;
         return (
-            <form>
-                <label htmlFor='name'>Name</label>
-                <input type='text' name="name" id="name" value={name} onChange={this.handleChange}/>
-                <label htmlFor='job'>Job</label>
-                <input type='text' name="job" id="job" value={job} onChange={this.handleChange}/>
-                <input type="button" value="Submit" onClick={this.submitForm}></input>
-            </form>
+            <Space>
+                <Input type='text' name="name" id="name" addonBefore="Name" value={name} onChange={this.handleChange}/>
+                <Input type='text' name="job" id="job" addonBefore="Job" value={job} onChange={this.handleChange}/>
+                <Button type="primary" onClick={this.submitForm}>Submit</Button>
+            </Space>
         )
     };
 }

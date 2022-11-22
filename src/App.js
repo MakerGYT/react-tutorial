@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import Table from './Table'
 import Form from './Form'
+import Clock from './Clock'
 class App extends Component {
     state = {
         characters: [],
@@ -23,6 +24,7 @@ class App extends Component {
       const {characters} = this.state
       return (
         <div className='container'>
+            <Clock />
             <Table characterData={characters} removeCharacter={this.removeCharacter}/>
             <Form handleSubmit={this.handleSubmit}/>
         </div>
