@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { DatePicker, Alert, message} from 'antd';
+import { DatePicker, Alert} from 'antd';
 class Clock extends Component {
     constructor(props) {
         super(props)
